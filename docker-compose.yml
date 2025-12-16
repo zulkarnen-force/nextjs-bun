@@ -1,0 +1,13 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    image: games-bun-dev
+    working_dir: /usr/src/app
+    container_name: games-bun
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - "3001:3000"
